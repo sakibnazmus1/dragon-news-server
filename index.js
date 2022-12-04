@@ -16,6 +16,7 @@ app.get('/news-catagories', (req, res) => {
     res.send(catagories);
 })
 
+
 app.get('/category/:id', (req, res) => {
     const id = req.params.id;
     if (id === '08') {
@@ -26,6 +27,10 @@ app.get('/category/:id', (req, res) => {
         res.send(catagoryNews);
     }
 
+})
+
+app.get('/news', (req, res) => {
+    res.send(news);
 })
 
 app.get('/news/:id', (req, res) => {
